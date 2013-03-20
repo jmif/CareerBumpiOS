@@ -1,26 +1,152 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rSc-9D-alC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="8Rj-LM-C7k">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="rSc-9D-alC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAp-hs-IQp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="A21-gB-OcG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kof-GS-MIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786" y="-453"/>
+        </scene>
+        <!--Login View Controller - CareerBump-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="CBViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="CBLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0L-EX-RQi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="OdQ-G8-hfU"/>
+                                    <constraint firstAttribute="height" constant="53" id="nZH-do-1kV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Student">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xvu-v0-t2k" kind="push" id="nvG-pf-YDg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-vO-Zk0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Gmm-m6-AH6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Recruiter">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ajz-cM-fhO" kind="push" id="kfh-aB-cXu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="97J-vO-Zk0" secondAttribute="bottom" constant="116" id="Epk-r7-pIN"/>
+                            <constraint firstItem="t0L-EX-RQi" firstAttribute="trailing" secondItem="97J-vO-Zk0" secondAttribute="trailing" type="default" id="GhE-Sb-HUC"/>
+                            <constraint firstItem="t0L-EX-RQi" firstAttribute="leading" secondItem="97J-vO-Zk0" secondAttribute="leading" type="default" id="RfI-bw-Ulx"/>
+                            <constraint firstItem="t0L-EX-RQi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="97" id="iG2-DH-jbI"/>
+                            <constraint firstItem="97J-vO-Zk0" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="moR-dA-UAG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="CareerBump" id="yst-8M-Qnc"/>
+                    <connections>
+                        <outlet property="recruiterButton" destination="97J-vO-Zk0" id="mnZ-t4-hD3"/>
+                        <outlet property="studentButton" destination="t0L-EX-RQi" id="UnV-ti-dVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-196" y="-453"/>
+        </scene>
+        <!--Student View Controller-->
+        <scene sceneID="KtF-Fh-0NH">
+            <objects>
+                <viewController id="xvu-v0-t2k" customClass="CBStudentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yrx-1V-46M">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Dt-6n-ssX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MuM-SI-DIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="-890"/>
+        </scene>
+        <!--Recruiter Table View Controller-->
+        <scene sceneID="AJC-Aj-fna">
+            <objects>
+                <tableViewController id="Ajz-cM-fhO" customClass="CBRecruiterTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IJz-6h-hkc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PpF-lN-rup">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ajz-cM-fhO" id="ap1-ak-Pjv"/>
+                            <outlet property="delegate" destination="Ajz-cM-fhO" id="LR1-fy-jO8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Boo-5g-6Eg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77W-rh-qes" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="-128"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CBLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBLoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="recruiterButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="studentButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CBRecruiterTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBRecruiterTableViewController.h"/>
+        </class>
+        <class className="CBStudentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBStudentViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

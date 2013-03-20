@@ -17,12 +17,14 @@
 		5456434C16FA1645002E57FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5456434B16FA1645002E57FF /* Default@2x.png */; };
 		5456434E16FA1645002E57FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5456434D16FA1645002E57FF /* Default-568h@2x.png */; };
 		5456435116FA1645002E57FF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5456434F16FA1645002E57FF /* MainStoryboard.storyboard */; };
-		5456435416FA1645002E57FF /* CBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456435316FA1645002E57FF /* CBViewController.m */; };
+		5456435416FA1645002E57FF /* CBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456435316FA1645002E57FF /* CBLoginViewController.m */; };
 		5456435C16FA1645002E57FF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456435B16FA1645002E57FF /* SenTestingKit.framework */; };
 		5456435D16FA1645002E57FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456433716FA1644002E57FF /* UIKit.framework */; };
 		5456435E16FA1645002E57FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456433916FA1644002E57FF /* Foundation.framework */; };
 		5456436616FA1645002E57FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5456436416FA1645002E57FF /* InfoPlist.strings */; };
 		5456436916FA1645002E57FF /* CareerBumpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456436816FA1645002E57FF /* CareerBumpTests.m */; };
+		5456437416FA1D0F002E57FF /* CBRecruiterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */; };
+		5456437716FA1D27002E57FF /* CBStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456437616FA1D27002E57FF /* CBStudentViewController.m */; };
 		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
 /* End PBXBuildFile section */
 
@@ -51,14 +53,18 @@
 		5456434B16FA1645002E57FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5456434D16FA1645002E57FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5456435016FA1645002E57FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5456435216FA1645002E57FF /* CBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBViewController.h; sourceTree = "<group>"; };
-		5456435316FA1645002E57FF /* CBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBViewController.m; sourceTree = "<group>"; };
+		5456435216FA1645002E57FF /* CBLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBLoginViewController.h; sourceTree = "<group>"; };
+		5456435316FA1645002E57FF /* CBLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLoginViewController.m; sourceTree = "<group>"; };
 		5456435A16FA1645002E57FF /* CareerBumpTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareerBumpTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5456435B16FA1645002E57FF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5456436316FA1645002E57FF /* CareerBumpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CareerBumpTests-Info.plist"; sourceTree = "<group>"; };
 		5456436516FA1645002E57FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5456436716FA1645002E57FF /* CareerBumpTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CareerBumpTests.h; sourceTree = "<group>"; };
 		5456436816FA1645002E57FF /* CareerBumpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CareerBumpTests.m; sourceTree = "<group>"; };
+		5456437216FA1D0E002E57FF /* CBRecruiterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRecruiterTableViewController.h; sourceTree = "<group>"; };
+		5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRecruiterTableViewController.m; sourceTree = "<group>"; };
+		5456437516FA1D27002E57FF /* CBStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStudentViewController.h; sourceTree = "<group>"; };
+		5456437616FA1D27002E57FF /* CBStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStudentViewController.m; sourceTree = "<group>"; };
 		8E20994216FA18790007F6A8 /* BumpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BumpClient.h; sourceTree = "<group>"; };
 		8E20994316FA18790007F6A8 /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,9 +132,13 @@
 				5456434616FA1645002E57FF /* CBAppDelegate.h */,
 				5456434716FA1645002E57FF /* CBAppDelegate.m */,
 				5456434F16FA1645002E57FF /* MainStoryboard.storyboard */,
-				5456435216FA1645002E57FF /* CBViewController.h */,
-				5456435316FA1645002E57FF /* CBViewController.m */,
+				5456435216FA1645002E57FF /* CBLoginViewController.h */,
+				5456435316FA1645002E57FF /* CBLoginViewController.m */,
 				5456433E16FA1644002E57FF /* Supporting Files */,
+				5456437216FA1D0E002E57FF /* CBRecruiterTableViewController.h */,
+				5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */,
+				5456437516FA1D27002E57FF /* CBStudentViewController.h */,
+				5456437616FA1D27002E57FF /* CBStudentViewController.m */,
 			);
 			path = CareerBump;
 			sourceTree = "<group>";
@@ -279,7 +289,9 @@
 			files = (
 				5456434416FA1645002E57FF /* main.m in Sources */,
 				5456434816FA1645002E57FF /* CBAppDelegate.m in Sources */,
-				5456435416FA1645002E57FF /* CBViewController.m in Sources */,
+				5456435416FA1645002E57FF /* CBLoginViewController.m in Sources */,
+				5456437416FA1D0F002E57FF /* CBRecruiterTableViewController.m in Sources */,
+				5456437716FA1D27002E57FF /* CBStudentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +403,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CareerBump/CareerBump-Prefix.pch";
 				INFOPLIST_FILE = "CareerBump/CareerBump-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -402,7 +416,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CareerBump/CareerBump-Prefix.pch";
 				INFOPLIST_FILE = "CareerBump/CareerBump-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
