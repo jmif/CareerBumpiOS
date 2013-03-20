@@ -32,6 +32,9 @@
 		5456438416FA26F1002E57FF /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456438316FA26F1002E57FF /* DropboxSDK.framework */; };
 		5456438616FA2710002E57FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456438516FA2710002E57FF /* Security.framework */; };
 		5456438816FA2715002E57FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456438716FA2715002E57FF /* QuartzCore.framework */; };
+		5456438C16FA3E20002E57FF /* CBFadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456438B16FA3E20002E57FF /* CBFadeSegue.m */; };
+		5456438F16FA3F66002E57FF /* CBReceiveResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456438E16FA3F66002E57FF /* CBReceiveResumeViewController.m */; };
+		5456439516FA431B002E57FF /* bump_ios_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 5456439416FA431B002E57FF /* bump_ios_512x512.png */; };
 		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,11 @@
 		5456438316FA26F1002E57FF /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		5456438516FA2710002E57FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5456438716FA2715002E57FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5456438A16FA3E20002E57FF /* CBFadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFadeSegue.h; sourceTree = "<group>"; };
+		5456438B16FA3E20002E57FF /* CBFadeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFadeSegue.m; sourceTree = "<group>"; };
+		5456438D16FA3F66002E57FF /* CBReceiveResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBReceiveResumeViewController.h; sourceTree = "<group>"; };
+		5456438E16FA3F66002E57FF /* CBReceiveResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBReceiveResumeViewController.m; sourceTree = "<group>"; };
+		5456439416FA431B002E57FF /* bump_ios_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bump_ios_512x512.png; sourceTree = "<group>"; };
 		8E20994216FA18790007F6A8 /* BumpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BumpClient.h; sourceTree = "<group>"; };
 		8E20994316FA18790007F6A8 /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,16 +163,17 @@
 		5456433D16FA1644002E57FF /* CareerBump */ = {
 			isa = PBXGroup;
 			children = (
+				5456439316FA40BD002E57FF /* Recruiter Files */,
 				5456434616FA1645002E57FF /* CBAppDelegate.h */,
 				5456434716FA1645002E57FF /* CBAppDelegate.m */,
 				5456434F16FA1645002E57FF /* MainStoryboard.storyboard */,
 				5456435216FA1645002E57FF /* CBLoginViewController.h */,
 				5456435316FA1645002E57FF /* CBLoginViewController.m */,
-				5456433E16FA1644002E57FF /* Supporting Files */,
-				5456437216FA1D0E002E57FF /* CBRecruiterTableViewController.h */,
-				5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */,
 				5456437516FA1D27002E57FF /* CBStudentViewController.h */,
 				5456437616FA1D27002E57FF /* CBStudentViewController.m */,
+				5456438916FA3DFC002E57FF /* Utilities */,
+				5456433E16FA1644002E57FF /* Supporting Files */,
+				5456439016FA4044002E57FF /* Resources */,
 			);
 			path = CareerBump;
 			sourceTree = "<group>";
@@ -200,6 +209,34 @@
 				5456436416FA1645002E57FF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5456438916FA3DFC002E57FF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5456438A16FA3E20002E57FF /* CBFadeSegue.h */,
+				5456438B16FA3E20002E57FF /* CBFadeSegue.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		5456439016FA4044002E57FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5456439416FA431B002E57FF /* bump_ios_512x512.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5456439316FA40BD002E57FF /* Recruiter Files */ = {
+			isa = PBXGroup;
+			children = (
+				5456437216FA1D0E002E57FF /* CBRecruiterTableViewController.h */,
+				5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */,
+				5456438D16FA3F66002E57FF /* CBReceiveResumeViewController.h */,
+				5456438E16FA3F66002E57FF /* CBReceiveResumeViewController.m */,
+			);
+			name = "Recruiter Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +316,7 @@
 				5456434C16FA1645002E57FF /* Default@2x.png in Resources */,
 				5456434E16FA1645002E57FF /* Default-568h@2x.png in Resources */,
 				5456435116FA1645002E57FF /* MainStoryboard.storyboard in Resources */,
+				5456439516FA431B002E57FF /* bump_ios_512x512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +356,8 @@
 				5456435416FA1645002E57FF /* CBLoginViewController.m in Sources */,
 				5456437416FA1D0F002E57FF /* CBRecruiterTableViewController.m in Sources */,
 				5456437716FA1D27002E57FF /* CBStudentViewController.m in Sources */,
+				5456438C16FA3E20002E57FF /* CBFadeSegue.m in Sources */,
+				5456438F16FA3F66002E57FF /* CBReceiveResumeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

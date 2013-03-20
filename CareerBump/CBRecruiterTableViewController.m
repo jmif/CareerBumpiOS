@@ -6,32 +6,36 @@
 //  Copyright (c) 2013 Joseph Mifsud. All rights reserved.
 //
 
+static const CGFloat kAddResumeHeaderHeight = 50.0;
+static const CGFloat kReceiveResumePullThreshold = 65.0;
+
+
 #import "CBRecruiterTableViewController.h"
+#import "CBReceiveResumeViewController.h"
 
 @interface CBRecruiterTableViewController ()
+
+@property (strong, nonatomic) CBReceiveResumeViewController *receiveResumeController;
+@property (strong, nonatomic) UIView *addResumeHeaderHolder;
 
 @end
 
 @implementation CBRecruiterTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.addResumeHeaderHolder = [[UIView alloc] initWithFrame:CGRectMake(0, -1 * kAddResumeHeaderHeight - 2, self.view.frame.size.width, kAddResumeHeaderHeight)];
+    self.addResumeHeaderHolder.backgroundColor = [UIColor clearColor];
+    
+    UILabel *receiveResumeLabel = [[UILabel alloc] initWithFrame:CGRectMake(45, 0, self.addResumeHeaderHolder.frame.size.width - 45, kAddResumeHeaderHeight)];
+    receiveResumeLabel.adjustsFontSizeToFitWidth = YES;
+    receiveResumeLabel.text = @"Receive a Resume...";
+    
+    [self.addResumeHeaderHolder addSubview:receiveResumeLabel];
+    
+    [self.tableView addSubview:self.addResumeHeaderHolder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,18 +44,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Scroll view delegate methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offset = self.tableView.contentOffset.y;
+    
+    if (offset < 0) {
+        self.addResumeHeaderHolder.alpha = (-1 * offset) / kReceiveResumePullThreshold;
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (self.tableView.contentOffset.y < -1 * kReceiveResumePullThreshold) {
+        [self performSegueWithIdentifier:@"receiveResumeSegue" sender:self];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
