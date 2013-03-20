@@ -8,6 +8,8 @@
 
 #import "CBStudentViewController.h"
 
+#import <DropboxSDK/DropboxSDK.h>
+
 @interface CBStudentViewController ()
 
 @end
@@ -26,13 +28,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)didPressAddResumeButton:(id)sender {
+    if (![[DBSession sharedSession] isLinked]) {
+        [[DBSession sharedSession] linkFromController:self];
+    }
 }
 
 @end

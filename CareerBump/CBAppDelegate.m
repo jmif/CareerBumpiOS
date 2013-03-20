@@ -8,11 +8,61 @@
 
 #import "CBAppDelegate.h"
 
+#import "BumpClient.h"
+#import <DropboxSDK/DropboxSDK.h>
+
 @implementation CBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Dropbox
+    DBSession* dbSession = [[DBSession alloc] initWithAppKey:@"q29fuzqzncr6t8w"
+                                                   appSecret:@"btyqk4cyev3jzj9"
+                                                        root:kDBRootDropbox];
+    [DBSession setSharedSession:dbSession];
+    
+    // userID is a string that you could use as the user's name, or an ID that is semantic within your environment
+    [BumpClient configureWithAPIKey:@"43c2ce3f407d49f18a09a80e2d95e77c" andUserID:[[UIDevice currentDevice] name]];
+    
+    [[BumpClient sharedClient] setMatchBlock:^(BumpChannelID channel) {
+        NSLog(@"Matched with user: %@", [[BumpClient sharedClient] userIDForChannel:channel]);
+        [[BumpClient sharedClient] confirmMatch:YES onChannel:channel];
+    }];
+    
+    [[BumpClient sharedClient] setChannelConfirmedBlock:^(BumpChannelID channel) {
+        NSLog(@"Channel with %@ confirmed.", [[BumpClient sharedClient] userIDForChannel:channel]);
+        [[BumpClient sharedClient] sendData:[[NSString stringWithFormat:@"Hello, world!"] dataUsingEncoding:NSUTF8StringEncoding]
+                                  toChannel:channel];
+    }];
+    
+    [[BumpClient sharedClient] setDataReceivedBlock:^(BumpChannelID channel, NSData *data) {
+        NSLog(@"Data received from %@: %@",
+              [[BumpClient sharedClient] userIDForChannel:channel],
+              [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
+    }];
+    
+    
+    // optional callback
+    [[BumpClient sharedClient] setConnectionStateChangedBlock:^(BOOL connected) {
+        if (connected) {
+            NSLog(@"Bump connected...");
+        } else {
+            NSLog(@"Bump disconnected...");
+        }
+    }];
+    
+    // optional callback
+    [[BumpClient sharedClient] setBumpEventBlock:^(bump_event event) {
+        switch(event) {
+            case BUMP_EVENT_BUMP:
+                NSLog(@"Bump detected.");
+                break;
+            case BUMP_EVENT_NO_MATCH:
+                NSLog(@"No match.");
+                break;
+        }
+    }];
+    
     return YES;
 }
 							
@@ -41,6 +91,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([[DBSession sharedSession] handleOpenURL:url]) {
+        if ([[DBSession sharedSession] isLinked]) {
+            NSLog(@"App linked successfully!");
+            // At this point you can start making API calls
+        }
+        return YES;
+    }
+    // Add whatever other url handling code your app requires here
+    return NO;
 }
 
 @end

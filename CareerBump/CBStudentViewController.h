@@ -10,4 +10,6 @@
 
 @interface CBStudentViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *addResumeButton;
+
 @end

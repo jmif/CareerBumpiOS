@@ -25,6 +25,13 @@
 		5456436916FA1645002E57FF /* CareerBumpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456436816FA1645002E57FF /* CareerBumpTests.m */; };
 		5456437416FA1D0F002E57FF /* CBRecruiterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */; };
 		5456437716FA1D27002E57FF /* CBStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456437616FA1D27002E57FF /* CBStudentViewController.m */; };
+		5456437E16FA2375002E57FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456437816FA2352002E57FF /* CFNetwork.framework */; };
+		5456437F16FA2378002E57FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456437A16FA235D002E57FF /* CoreLocation.framework */; };
+		5456438016FA237D002E57FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456437C16FA2364002E57FF /* AudioToolbox.framework */; };
+		5456438216FA2492002E57FF /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
+		5456438416FA26F1002E57FF /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456438316FA26F1002E57FF /* DropboxSDK.framework */; };
+		5456438616FA2710002E57FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456438516FA2710002E57FF /* Security.framework */; };
+		5456438816FA2715002E57FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456438716FA2715002E57FF /* QuartzCore.framework */; };
 		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +72,12 @@
 		5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRecruiterTableViewController.m; sourceTree = "<group>"; };
 		5456437516FA1D27002E57FF /* CBStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStudentViewController.h; sourceTree = "<group>"; };
 		5456437616FA1D27002E57FF /* CBStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStudentViewController.m; sourceTree = "<group>"; };
+		5456437816FA2352002E57FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5456437A16FA235D002E57FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5456437C16FA2364002E57FF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5456438316FA26F1002E57FF /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		5456438516FA2710002E57FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5456438716FA2715002E57FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8E20994216FA18790007F6A8 /* BumpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BumpClient.h; sourceTree = "<group>"; };
 		8E20994316FA18790007F6A8 /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,9 +87,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5456438816FA2715002E57FF /* QuartzCore.framework in Frameworks */,
+				5456438616FA2710002E57FF /* Security.framework in Frameworks */,
+				5456438216FA2492002E57FF /* libBump.a in Frameworks */,
+				5456438016FA237D002E57FF /* AudioToolbox.framework in Frameworks */,
+				5456437F16FA2378002E57FF /* CoreLocation.framework in Frameworks */,
+				5456437E16FA2375002E57FF /* CFNetwork.framework in Frameworks */,
 				5456433816FA1644002E57FF /* UIKit.framework in Frameworks */,
 				5456433A16FA1644002E57FF /* Foundation.framework in Frameworks */,
 				5456433C16FA1644002E57FF /* CoreGraphics.framework in Frameworks */,
+				5456438416FA26F1002E57FF /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +136,12 @@
 		5456433616FA1644002E57FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5456438716FA2715002E57FF /* QuartzCore.framework */,
+				5456438516FA2710002E57FF /* Security.framework */,
+				5456438316FA26F1002E57FF /* DropboxSDK.framework */,
+				5456437C16FA2364002E57FF /* AudioToolbox.framework */,
+				5456437A16FA235D002E57FF /* CoreLocation.framework */,
+				5456437816FA2352002E57FF /* CFNetwork.framework */,
 				8E20994216FA18790007F6A8 /* BumpClient.h */,
 				8E20994316FA18790007F6A8 /* libBump.a */,
 				5456433716FA1644002E57FF /* UIKit.framework */,
@@ -400,10 +426,18 @@
 		5456436D16FA1645002E57FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CareerBump/CareerBump-Prefix.pch";
 				INFOPLIST_FILE = "CareerBump/CareerBump-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -413,10 +447,18 @@
 		5456436E16FA1645002E57FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CareerBump/CareerBump-Prefix.pch";
 				INFOPLIST_FILE = "CareerBump/CareerBump-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

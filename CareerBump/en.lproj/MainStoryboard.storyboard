@@ -87,9 +87,34 @@
                     <view key="view" contentMode="scaleToFill" id="yrx-1V-46M">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ney-9g-YQY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="GAz-EG-4LC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add a Resume">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressAddResumeButton:" destination="xvu-v0-t2k" eventType="touchUpInside" id="IAO-jN-Fe5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ney-9g-YQY" firstAttribute="top" secondItem="yrx-1V-46M" secondAttribute="top" constant="38" id="rau-9F-QtL"/>
+                            <constraint firstItem="ney-9g-YQY" firstAttribute="centerX" secondItem="yrx-1V-46M" secondAttribute="centerX" type="default" id="x1M-e0-Jcp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Dt-6n-ssX"/>
+                    <connections>
+                        <outlet property="addResumeButton" destination="ney-9g-YQY" id="r1p-iJ-l9M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuM-SI-DIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,24 +151,6 @@
             <point key="canvasLocation" x="495" y="-128"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CBLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBLoginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="recruiterButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="studentButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CBRecruiterTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBRecruiterTableViewController.h"/>
-        </class>
-        <class className="CBStudentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBStudentViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
