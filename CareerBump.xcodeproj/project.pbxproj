@@ -23,6 +23,7 @@
 		5456435E16FA1645002E57FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456433916FA1644002E57FF /* Foundation.framework */; };
 		5456436616FA1645002E57FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5456436416FA1645002E57FF /* InfoPlist.strings */; };
 		5456436916FA1645002E57FF /* CareerBumpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456436816FA1645002E57FF /* CareerBumpTests.m */; };
+		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		5456436516FA1645002E57FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5456436716FA1645002E57FF /* CareerBumpTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CareerBumpTests.h; sourceTree = "<group>"; };
 		5456436816FA1645002E57FF /* CareerBumpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CareerBumpTests.m; sourceTree = "<group>"; };
+		8E20994216FA18790007F6A8 /* BumpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BumpClient.h; sourceTree = "<group>"; };
+		8E20994316FA18790007F6A8 /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 				5456435C16FA1645002E57FF /* SenTestingKit.framework in Frameworks */,
 				5456435D16FA1645002E57FF /* UIKit.framework in Frameworks */,
 				5456435E16FA1645002E57FF /* Foundation.framework in Frameworks */,
+				8E20994416FA18790007F6A8 /* libBump.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,8 @@
 		5456433616FA1644002E57FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E20994216FA18790007F6A8 /* BumpClient.h */,
+				8E20994316FA18790007F6A8 /* libBump.a */,
 				5456433716FA1644002E57FF /* UIKit.framework */,
 				5456433916FA1644002E57FF /* Foundation.framework */,
 				5456433B16FA1644002E57FF /* CoreGraphics.framework */,
@@ -412,6 +418,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CareerBump/CareerBump-Prefix.pch";
 				INFOPLIST_FILE = "CareerBumpTests/CareerBumpTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -429,6 +439,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CareerBump/CareerBump-Prefix.pch";
 				INFOPLIST_FILE = "CareerBumpTests/CareerBumpTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -454,6 +468,7 @@
 				5456436E16FA1645002E57FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5456436F16FA1645002E57FF /* Build configuration list for PBXNativeTarget "CareerBumpTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +477,7 @@
 				5456437116FA1645002E57FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
