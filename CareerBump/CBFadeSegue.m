@@ -16,7 +16,7 @@
 {
     CATransition* transition = [CATransition animation];
     
-    transition.duration = 0.2;
+    transition.duration = 0.3;
     transition.type = kCATransitionFade;
     
     [[self.sourceViewController navigationController].view.layer addAnimation:transition forKey:kCATransition];

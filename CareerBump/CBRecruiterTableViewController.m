@@ -38,6 +38,12 @@ static const CGFloat kReceiveResumePullThreshold = 65.0;
     [self.tableView addSubview:self.addResumeHeaderHolder];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.addResumeHeaderHolder.hidden = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -57,7 +63,9 @@ static const CGFloat kReceiveResumePullThreshold = 65.0;
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
+    [self.tableView setContentOffset:CGPointZero animated:YES];
     if (self.tableView.contentOffset.y < -1 * kReceiveResumePullThreshold) {
+        self.addResumeHeaderHolder.hidden = YES;
         [self performSegueWithIdentifier:@"receiveResumeSegue" sender:self];
     }
 }
