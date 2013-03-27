@@ -104,16 +104,24 @@
                                     <action selector="didPressAddResumeButton:" destination="xvu-v0-t2k" eventType="touchUpInside" id="IAO-jN-Fe5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="None Chosen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvR-hP-NVr">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ney-9g-YQY" firstAttribute="centerX" secondItem="yrx-1V-46M" secondAttribute="centerX" type="default" id="0a5-rN-fpW"/>
+                            <constraint firstItem="cvR-hP-NVr" firstAttribute="centerX" secondItem="ney-9g-YQY" secondAttribute="centerX" type="default" id="Cbn-kC-SsW"/>
+                            <constraint firstItem="cvR-hP-NVr" firstAttribute="top" secondItem="yrx-1V-46M" secondAttribute="top" constant="206" id="Vqw-UG-zm7"/>
                             <constraint firstItem="ney-9g-YQY" firstAttribute="top" secondItem="yrx-1V-46M" secondAttribute="top" constant="38" id="rau-9F-QtL"/>
-                            <constraint firstItem="ney-9g-YQY" firstAttribute="centerX" secondItem="yrx-1V-46M" secondAttribute="centerX" type="default" id="x1M-e0-Jcp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Dt-6n-ssX"/>
                     <connections>
                         <outlet property="addResumeButton" destination="ney-9g-YQY" id="r1p-iJ-l9M"/>
+                        <outlet property="resumeAlert" destination="cvR-hP-NVr" id="NsJ-n5-5QF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuM-SI-DIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,6 +159,30 @@
             <point key="canvasLocation" x="495" y="-128"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CBLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBLoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="recruiterButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="studentButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CBRecruiterTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBRecruiterTableViewController.h"/>
+        </class>
+        <class className="CBStudentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBStudentViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didPressAddResumeButton:"/>
+                <relationship kind="outlet" name="addResumeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="placeholderImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="resumeAlert" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
