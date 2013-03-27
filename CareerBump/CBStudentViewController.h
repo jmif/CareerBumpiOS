@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <DropboxSDK/DropboxSDK.h>
+#import <FPPicker/FPPicker.h>
+#import <FPPicker/FPPickerController.h>
+#import <FPPicker/FPSaveController.h>
+#import <FPPicker/FPExternalHeaders.h>
+#import <FPPicker/FPConstants.h>
 
-@interface CBStudentViewController : UIViewController
+
+@interface CBStudentViewController : UIViewController < FPPickerDelegate >
 
 @property (weak, nonatomic) IBOutlet UIButton *addResumeButton;
+
+@property (strong, nonatomic) IBOutlet UILabel *resumeAlert;
+
 
 @end

@@ -36,6 +36,10 @@
 		5456438F16FA3F66002E57FF /* CBReceiveResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456438E16FA3F66002E57FF /* CBReceiveResumeViewController.m */; };
 		5456439516FA431B002E57FF /* bump_ios_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 5456439416FA431B002E57FF /* bump_ios_512x512.png */; };
 		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
+		8E20994E16FAA2930007F6A8 /* FPPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994D16FAA2930007F6A8 /* FPPicker.framework */; };
+		8E20995016FAA4050007F6A8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994F16FAA4050007F6A8 /* AssetsLibrary.framework */; };
+		8E20995216FAA4180007F6A8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20995116FAA4180007F6A8 /* MobileCoreServices.framework */; };
+		8E20995416FAA4260007F6A8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20995316FAA4260007F6A8 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		5456439416FA431B002E57FF /* bump_ios_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bump_ios_512x512.png; sourceTree = "<group>"; };
 		8E20994216FA18790007F6A8 /* BumpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BumpClient.h; sourceTree = "<group>"; };
 		8E20994316FA18790007F6A8 /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
+		8E20994D16FAA2930007F6A8 /* FPPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FPPicker.framework; sourceTree = "<group>"; };
+		8E20994F16FAA4050007F6A8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8E20995116FAA4180007F6A8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8E20995316FAA4260007F6A8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,16 +103,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E20995416FAA4260007F6A8 /* CoreFoundation.framework in Frameworks */,
+				5456433A16FA1644002E57FF /* Foundation.framework in Frameworks */,
+				8E20995216FAA4180007F6A8 /* MobileCoreServices.framework in Frameworks */,
+				5456433C16FA1644002E57FF /* CoreGraphics.framework in Frameworks */,
 				5456438816FA2715002E57FF /* QuartzCore.framework in Frameworks */,
+				8E20995016FAA4050007F6A8 /* AssetsLibrary.framework in Frameworks */,
 				5456438616FA2710002E57FF /* Security.framework in Frameworks */,
 				5456438216FA2492002E57FF /* libBump.a in Frameworks */,
 				5456438016FA237D002E57FF /* AudioToolbox.framework in Frameworks */,
 				5456437F16FA2378002E57FF /* CoreLocation.framework in Frameworks */,
 				5456437E16FA2375002E57FF /* CFNetwork.framework in Frameworks */,
 				5456433816FA1644002E57FF /* UIKit.framework in Frameworks */,
-				5456433A16FA1644002E57FF /* Foundation.framework in Frameworks */,
-				5456433C16FA1644002E57FF /* CoreGraphics.framework in Frameworks */,
 				5456438416FA26F1002E57FF /* DropboxSDK.framework in Frameworks */,
+				8E20994E16FAA2930007F6A8 /* FPPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +156,10 @@
 		5456433616FA1644002E57FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E20995316FAA4260007F6A8 /* CoreFoundation.framework */,
+				8E20995116FAA4180007F6A8 /* MobileCoreServices.framework */,
+				8E20994F16FAA4050007F6A8 /* AssetsLibrary.framework */,
+				8E20994D16FAA2930007F6A8 /* FPPicker.framework */,
 				5456438716FA2715002E57FF /* QuartzCore.framework */,
 				5456438516FA2710002E57FF /* Security.framework */,
 				5456438316FA26F1002E57FF /* DropboxSDK.framework */,
@@ -478,8 +494,12 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = all_load;
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,8 +519,11 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = all_load;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
