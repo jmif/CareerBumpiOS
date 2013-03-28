@@ -36,8 +36,8 @@
     self.navigationItem.hidesBackButton = YES;
     self.errorMessageView.alpha = 0.0;
     self.loadingView.baseColor = [UIColor colorWithRed:136/255.0 green:229/255.0 blue:252/255.0 alpha:1.0];
-    self.loadingView.hidden = NO;
-    self.errorMessageView.hidden = NO;
+    self.loadingView.hidden = YES;
+    self.errorMessageView.hidden = YES;
     
     [[BumpClient sharedClient] setBumpable:YES];
     
@@ -45,13 +45,13 @@
         switch (event) {
             case BUMP_EVENT_BUMP:
                 self.errorMessageView.alpha = 0.0;
+                self.loadingView.hidden = NO;
                 [self.loadingView startAnimating];
-                self.loadingView.hidden = YES;
                 
                 break;
             case BUMP_EVENT_NO_MATCH:
                 [self.loadingView stopAnimating];
-                self.loadingView.hidden = NO;
+                self.loadingView.hidden = YES;
                 
                 self.originalErrorMessageWidthConstraint = self.errorMessageWidthConstraint.constant;
                 self.originalErrorMessageHeightConstraint = self.errorMessageHeightConstraint.constant;
@@ -81,6 +81,7 @@
     }];
     
     [[BumpClient sharedClient] setMatchBlock:^(BumpChannelID channel) {
+        self.loadingView.hidden = YES;
         NSLog(@"Matched with user: %@", [[BumpClient sharedClient] userIDForChannel:channel]);
         [[BumpClient sharedClient] confirmMatch:YES onChannel:channel];
     }];
@@ -90,6 +91,11 @@
               [[BumpClient sharedClient] userIDForChannel:channel],
               [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [PubNub subscribeOnChannel:[PNChannel channelWithName:@"resume-send"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated

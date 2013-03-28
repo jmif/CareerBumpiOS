@@ -25,6 +25,8 @@ static const CGFloat kReceiveResumePullThreshold = 65.0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [PubNub connect];
 
     self.addResumeHeaderHolder = [[UIView alloc] initWithFrame:CGRectMake(0, -1 * kAddResumeHeaderHeight - 2, self.view.frame.size.width, kAddResumeHeaderHeight)];
     self.addResumeHeaderHolder.backgroundColor = [UIColor clearColor];

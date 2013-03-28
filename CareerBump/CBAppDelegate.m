@@ -7,6 +7,7 @@
 //
 
 #import "CBAppDelegate.h"
+#import "PNDefaultConfiguration.h"
 
 #import "BumpClient.h"
 #import <DropboxSDK/DropboxSDK.h>
@@ -20,6 +21,11 @@
                                                    appSecret:@"btyqk4cyev3jzj9"
                                                         root:kDBRootDropbox];
     [DBSession setSharedSession:dbSession];
+    
+    // PubNub
+    [PubNub setConfiguration:[PNConfiguration configurationWithPublishKey:@"pub-c-f825e8b0-06be-468f-b087-604263304043"
+                                    subscribeKey:@"sub-c-b6a806d8-9746-11e2-8cf1-12313f022c90"
+                                       secretKey:@"sec-c-NDc5OGIwMDYtOWIwOC00NTdjLThjZjctNjYwZWMyZDJhNjA1"]];
     
     // userID is a string that you could use as the user's name, or an ID that is semantic within your environment
     [BumpClient configureWithAPIKey:@"43c2ce3f407d49f18a09a80e2d95e77c" andUserID:[[UIDevice currentDevice] name]];
