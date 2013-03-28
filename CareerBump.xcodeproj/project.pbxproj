@@ -36,7 +36,6 @@
 		5456438F16FA3F66002E57FF /* CBReceiveResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456438E16FA3F66002E57FF /* CBReceiveResumeViewController.m */; };
 		5456439516FA431B002E57FF /* bump_ios_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 5456439416FA431B002E57FF /* bump_ios_512x512.png */; };
 		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
-		8E20994E16FAA2930007F6A8 /* FPPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994D16FAA2930007F6A8 /* FPPicker.framework */; };
 		8E20995016FAA4050007F6A8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994F16FAA4050007F6A8 /* AssetsLibrary.framework */; };
 		8E20995216FAA4180007F6A8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20995116FAA4180007F6A8 /* MobileCoreServices.framework */; };
 		8E20995416FAA4260007F6A8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20995316FAA4260007F6A8 /* CoreFoundation.framework */; };
@@ -116,7 +115,6 @@
 				5456437E16FA2375002E57FF /* CFNetwork.framework in Frameworks */,
 				5456433816FA1644002E57FF /* UIKit.framework in Frameworks */,
 				5456438416FA26F1002E57FF /* DropboxSDK.framework in Frameworks */,
-				8E20994E16FAA2930007F6A8 /* FPPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
