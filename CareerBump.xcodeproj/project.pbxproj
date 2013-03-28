@@ -85,7 +85,6 @@
 		54DFD3881703D08500696BB7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DFD3861703D06300696BB7 /* SystemConfiguration.framework */; };
 		54DFD38A1703D08E00696BB7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DFD3891703D08E00696BB7 /* libz.dylib */; };
 		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
-		8E20994E16FAA2930007F6A8 /* FPPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994D16FAA2930007F6A8 /* FPPicker.framework */; };
 		8E20995016FAA4050007F6A8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994F16FAA4050007F6A8 /* AssetsLibrary.framework */; };
 		8E20995216FAA4180007F6A8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20995116FAA4180007F6A8 /* MobileCoreServices.framework */; };
 		8E20995416FAA4260007F6A8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20995316FAA4260007F6A8 /* CoreFoundation.framework */; };
