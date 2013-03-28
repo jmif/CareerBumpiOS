@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5420009716FBA37600FF7776 /* CBCircularLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5420009616FBA37600FF7776 /* CBCircularLoadingView.m */; };
 		5456433816FA1644002E57FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456433716FA1644002E57FF /* UIKit.framework */; };
 		5456433A16FA1644002E57FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456433916FA1644002E57FF /* Foundation.framework */; };
 		5456433C16FA1644002E57FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456433B16FA1644002E57FF /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5420009516FBA37600FF7776 /* CBCircularLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircularLoadingView.h; sourceTree = "<group>"; };
+		5420009616FBA37600FF7776 /* CBCircularLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircularLoadingView.m; sourceTree = "<group>"; };
 		5456433416FA1644002E57FF /* CareerBump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareerBump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5456433716FA1644002E57FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5456433916FA1644002E57FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5420009116FA784000FF7776 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				5420009516FBA37600FF7776 /* CBCircularLoadingView.h */,
+				5420009616FBA37600FF7776 /* CBCircularLoadingView.m */,
+			);
+			name = "UI Components";
+			sourceTree = "<group>";
+		};
 		5456432B16FA1644002E57FF = {
 			isa = PBXGroup;
 			children = (
@@ -177,9 +189,9 @@
 		5456433D16FA1644002E57FF /* CareerBump */ = {
 			isa = PBXGroup;
 			children = (
-				5456439316FA40BD002E57FF /* Recruiter Files */,
 				5456434616FA1645002E57FF /* CBAppDelegate.h */,
 				5456434716FA1645002E57FF /* CBAppDelegate.m */,
+				5456439316FA40BD002E57FF /* Recruiter Files */,
 				5456434F16FA1645002E57FF /* MainStoryboard.storyboard */,
 				5456435216FA1645002E57FF /* CBLoginViewController.h */,
 				5456435316FA1645002E57FF /* CBLoginViewController.m */,
@@ -245,6 +257,7 @@
 		5456439316FA40BD002E57FF /* Recruiter Files */ = {
 			isa = PBXGroup;
 			children = (
+				5420009116FA784000FF7776 /* UI Components */,
 				5456437216FA1D0E002E57FF /* CBRecruiterTableViewController.h */,
 				5456437316FA1D0E002E57FF /* CBRecruiterTableViewController.m */,
 				5456438D16FA3F66002E57FF /* CBReceiveResumeViewController.h */,
@@ -372,6 +385,7 @@
 				5456437716FA1D27002E57FF /* CBStudentViewController.m in Sources */,
 				5456438C16FA3E20002E57FF /* CBFadeSegue.m in Sources */,
 				5456438F16FA3F66002E57FF /* CBReceiveResumeViewController.m in Sources */,
+				5420009716FBA37600FF7776 /* CBCircularLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

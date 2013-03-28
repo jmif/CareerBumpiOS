@@ -23,45 +23,7 @@
     
     // userID is a string that you could use as the user's name, or an ID that is semantic within your environment
     [BumpClient configureWithAPIKey:@"43c2ce3f407d49f18a09a80e2d95e77c" andUserID:[[UIDevice currentDevice] name]];
-    
-    [[BumpClient sharedClient] setMatchBlock:^(BumpChannelID channel) {
-        NSLog(@"Matched with user: %@", [[BumpClient sharedClient] userIDForChannel:channel]);
-        [[BumpClient sharedClient] confirmMatch:YES onChannel:channel];
-    }];
-    
-    [[BumpClient sharedClient] setChannelConfirmedBlock:^(BumpChannelID channel) {
-        NSLog(@"Channel with %@ confirmed.", [[BumpClient sharedClient] userIDForChannel:channel]);
-        [[BumpClient sharedClient] sendData:[[NSString stringWithFormat:@"Hello, world!"] dataUsingEncoding:NSUTF8StringEncoding]
-                                  toChannel:channel];
-    }];
-    
-    [[BumpClient sharedClient] setDataReceivedBlock:^(BumpChannelID channel, NSData *data) {
-        NSLog(@"Data received from %@: %@",
-              [[BumpClient sharedClient] userIDForChannel:channel],
-              [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
-    }];
-    
-    
-    // optional callback
-    [[BumpClient sharedClient] setConnectionStateChangedBlock:^(BOOL connected) {
-        if (connected) {
-            NSLog(@"Bump connected...");
-        } else {
-            NSLog(@"Bump disconnected...");
-        }
-    }];
-    
-    // optional callback
-    [[BumpClient sharedClient] setBumpEventBlock:^(bump_event event) {
-        switch(event) {
-            case BUMP_EVENT_BUMP:
-                NSLog(@"Bump detected.");
-                break;
-            case BUMP_EVENT_NO_MATCH:
-                NSLog(@"No match.");
-                break;
-        }
-    }];
+    [[BumpClient sharedClient] setBumpable:NO];
     
     return YES;
 }

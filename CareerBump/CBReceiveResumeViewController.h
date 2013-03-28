@@ -10,4 +10,6 @@
 
 @interface CBReceiveResumeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+
 @end
