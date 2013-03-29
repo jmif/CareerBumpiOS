@@ -25,6 +25,7 @@
 @property CGFloat originalErrorMessageHeightConstraint;
 
 @property (weak, nonatomic) IBOutlet CBCircularLoadingView *loadingView;
+@property BOOL once;
 
 @end
 
@@ -76,6 +77,14 @@
                     
                     [self.tryAgainLabel.layer addAnimation:animation forKey:@"pulsateText"];
                 }];
+                
+                
+                if (self.once == NO) {
+                    self.once = YES;
+                    [PubNub sendMessage:@"Neil Sood|University of Michigan|Sophomore|50 million"
+                              toChannel:[PNChannel channelWithName:@"resume-send"]];
+                }
+                
                 break;
         }
     }];
@@ -84,18 +93,30 @@
         self.loadingView.hidden = YES;
         NSLog(@"Matched with user: %@", [[BumpClient sharedClient] userIDForChannel:channel]);
         [[BumpClient sharedClient] confirmMatch:YES onChannel:channel];
+        
+        if (self.student) {
+            [[BumpClient sharedClient] sendData:[[NSString stringWithFormat:@"Neil Sood|University of Michigan|Sophomore|50 million"] dataUsingEncoding:NSUTF8StringEncoding]
+                                      toChannel:channel];
+        }
     }];
     
     [[BumpClient sharedClient] setDataReceivedBlock:^(BumpChannelID channel, NSData *data) {
         NSLog(@"Data received from %@: %@",
               [[BumpClient sharedClient] userIDForChannel:channel],
               [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
+        if (self.once == NO) {
+            self.once = YES;
+            [PubNub sendMessage:@"Neil Sood|University of Michigan|Sophomore|50 million"
+                  toChannel:[PNChannel channelWithName:@"resume-send"]];
+        }
+
     }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [PubNub subscribeOnChannel:[PNChannel channelWithName:@"resume-send"]];
+    self.once = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated

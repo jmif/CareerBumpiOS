@@ -52,6 +52,14 @@ static const CGFloat kReceiveResumePullThreshold = 65.0;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"receiveResumeSegue"]) {
+        CBReceiveResumeViewController *vc = [segue destinationViewController];
+        vc.student = NO;
+    }
+}
+
 #pragma mark - Scroll view delegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

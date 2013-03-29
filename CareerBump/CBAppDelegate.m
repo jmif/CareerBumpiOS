@@ -11,11 +11,14 @@
 
 #import "BumpClient.h"
 #import <DropboxSDK/DropboxSDK.h>
+#import <AWSiOSSDK/AmazonErrorHandler.h>
 
 @implementation CBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [AmazonErrorHandler shouldNotThrowExceptions];
+    
     // Dropbox
     DBSession* dbSession = [[DBSession alloc] initWithAppKey:@"q29fuzqzncr6t8w"
                                                    appSecret:@"btyqk4cyev3jzj9"

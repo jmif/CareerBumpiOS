@@ -84,6 +84,9 @@
 		54DFD3851703CF9900696BB7 /* PNConnectionChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DFD3581703CF9900696BB7 /* PNConnectionChannel.m */; };
 		54DFD3881703D08500696BB7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DFD3861703D06300696BB7 /* SystemConfiguration.framework */; };
 		54DFD38A1703D08E00696BB7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DFD3891703D08E00696BB7 /* libz.dylib */; };
+		54DFD38E1703DC9600696BB7 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54DFD38B1703DC9600696BB7 /* SVProgressHUD.bundle */; };
+		54DFD38F1703DC9600696BB7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DFD38D1703DC9600696BB7 /* SVProgressHUD.m */; };
+		54DFD3901703DCBE00696BB7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DFD38D1703DC9600696BB7 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		8E20994416FA18790007F6A8 /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994316FA18790007F6A8 /* libBump.a */; };
 		8E20995016FAA4050007F6A8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20994F16FAA4050007F6A8 /* AssetsLibrary.framework */; };
 		8E20995216FAA4180007F6A8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E20995116FAA4180007F6A8 /* MobileCoreServices.framework */; };
@@ -271,6 +274,9 @@
 		54DFD3581703CF9900696BB7 /* PNConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNConnectionChannel.m; sourceTree = "<group>"; };
 		54DFD3861703D06300696BB7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		54DFD3891703D08E00696BB7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		54DFD38B1703DC9600696BB7 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		54DFD38C1703DC9600696BB7 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		54DFD38D1703DC9600696BB7 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		8E20994216FA18790007F6A8 /* BumpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BumpClient.h; sourceTree = "<group>"; };
 		8E20994316FA18790007F6A8 /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
 		8E20994D16FAA2930007F6A8 /* FPPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FPPicker.framework; sourceTree = "<group>"; };
@@ -299,7 +305,6 @@
 				5456437E16FA2375002E57FF /* CFNetwork.framework in Frameworks */,
 				5456433816FA1644002E57FF /* UIKit.framework in Frameworks */,
 				5456438416FA26F1002E57FF /* DropboxSDK.framework in Frameworks */,
-				8E20994E16FAA2930007F6A8 /* FPPicker.framework in Frameworks */,
 				54DFD2B01703C51A00696BB7 /* AWSiOSSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +432,9 @@
 		5456438916FA3DFC002E57FF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				54DFD38B1703DC9600696BB7 /* SVProgressHUD.bundle */,
+				54DFD38C1703DC9600696BB7 /* SVProgressHUD.h */,
+				54DFD38D1703DC9600696BB7 /* SVProgressHUD.m */,
 				5456438A16FA3E20002E57FF /* CBFadeSegue.h */,
 				5456438B16FA3E20002E57FF /* CBFadeSegue.m */,
 			);
@@ -795,6 +803,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5456436616FA1645002E57FF /* InfoPlist.strings in Resources */,
+				54DFD38E1703DC9600696BB7 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,6 +830,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54DFD3901703DCBE00696BB7 /* SVProgressHUD.m in Sources */,
 				5456434416FA1645002E57FF /* main.m in Sources */,
 				5456434816FA1645002E57FF /* CBAppDelegate.m in Sources */,
 				5456435416FA1645002E57FF /* CBLoginViewController.m in Sources */,
@@ -882,6 +892,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5456436916FA1645002E57FF /* CareerBumpTests.m in Sources */,
+				54DFD38F1703DC9600696BB7 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
+@property BOOL student;
+
 @end
